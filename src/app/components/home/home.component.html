@@ -1,1 +1,27 @@
-<div class="perent-hero "> <app-navbar></app-navbar> <section class="hero"> <video autoplay muted loop playsinline> <source src="/assets/heroBackground.webm" type="video/mp4"> </video> <div class="hero-content"> <h1> <span class="small-line"> {{ currentLang === 'en' ? 'Building Immersive' : 'نُنشئ عوالم رقمية' }} </span> <span class="big-line highlight"> {{ currentLang === 'en' ? 'Digital Worlds' : 'غامرة' }} </span> <span class="medium-line"> {{ currentLang === 'en' ? 'That Solve Real Problems' : 'تحل مشكلات حقيقية' }} </span> </h1> <p> {{ currentLang === 'en' ? 'We design VR, Metaverse, and Interactive AI experiences for education, tourism, and enterprise innovation.' : 'نصمم تجارب واقع افتراضي وميتافيرس وتجارب تفاعلية مدعومة بالذكاء الاصطناعي لقطاعات التعليم والسياحة والابتكار المؤسسي.' }} </p> <div class="hero-buttons"> <a (click)="scrollToProjects()" class="primary-btn"> {{ currentLang === 'en' ? 'Explore Our Work' : 'استعرض أعمالنا' }} </a> <a routerLink="/home/contact-us" class="secondary-btn"> {{ currentLang === 'en' ? 'Book a Discovery Call' : 'احجز جلسة استشارية' }} </a> </div> </div> </section> </div> <section id="section-about" class="about-section"> <app-about-section></app-about-section> </section> <section id="section-services" class="services-section"> <app-services-section></app-services-section> </section> <section id="section-projects" class="projects-section"> <app-projects-section></app-projects-section> </section> <section id="section-industries" class="industries-section"> <app-industries-section></app-industries-section> </section> <section id="section-whyus" class="whyus-section"> <app-whyus-section></app-whyus-section> </section> <section id="section-process" class="process-section"> <app-process-section></app-process-section> </section> <section id="section-cta" class="cta-section"> <app-cta-section></app-cta-section> </section> <app-footer></app-footer>
+<div class="perent-hero "> <app-navbar></app-navbar>
+    <section class="hero"> <video autoplay muted loop playsinline>
+            <source src="/assets/heroBackground.webm" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1> <span class="small-line"> {{ currentLang === 'en' ? 'Building Immersive' : 'نُنشئ عوالم رقمية' }}
+                </span> <span class="big-line highlight"> {{ currentLang === 'en' ? 'Digital Worlds' : 'غامرة' }}
+                </span> <span class="medium-line"> {{ currentLang === 'en' ? 'That Solve Real Problems' : 'تحل مشكلات
+                    حقيقية' }} </span> </h1>
+            <p> {{ currentLang === 'en' ? 'We design VR, Metaverse, and Interactive AI experiences for education,
+                tourism, and enterprise innovation.' : 'نصمم تجارب واقع افتراضي وميتافيرس وتجارب تفاعلية مدعومة بالذكاء
+                الاصطناعي لقطاعات التعليم والسياحة والابتكار المؤسسي.' }} </p>
+            <div class="hero-buttons"> <a (click)="scrollToProjects()" class="primary-btn"> {{ currentLang === 'en' ?
+                    'Explore Our Work' : 'استعرض أعمالنا' }} </a> <a routerLink="/home/contact-us"
+                    class="secondary-btn"> {{ currentLang === 'en' ? 'Book a Discovery Call' : 'احجز جلسة استشارية' }}
+                </a> </div>
+        </div>
+    </section>
+</div>
+<section id="section-about" class="about-section"> <app-about-section></app-about-section> </section>
+<section id="section-services" class="services-section"> <app-services-section></app-services-section> </section>
+<section id="section-projects" class="projects-section"> <app-projects-section></app-projects-section> </section>
+<section id="section-industries" class="industries-section"> <app-industries-section></app-industries-section>
+</section>
+<section id="section-whyus" class="whyus-section"> <app-whyus-section></app-whyus-section> </section>
+<section id="section-process" class="process-section"> <app-process-section></app-process-section> </section>
+<section id="section-cta" class="cta-section"> <app-cta-section></app-cta-section> </section> <app-footer></app-footer>
