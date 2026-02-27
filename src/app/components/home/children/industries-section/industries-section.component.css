@@ -182,3 +182,17 @@
 .industry-card:hover .card-shine {
     transform: rotate(30deg) translate(20%, 20%);
 }
+/* Blue brand text color overrides */
+.section-tag,
+.section-tag.light,
+.card-icon i {
+  color: #3b82f6;
+}
+
+.industry-card:hover .card-icon i {
+  color: #60a5fa;
+}
+
+.title-highlight {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
