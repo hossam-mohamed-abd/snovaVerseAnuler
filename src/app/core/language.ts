@@ -1,0 +1,21 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LanguageService {
+
+  private lang = new BehaviorSubject<'en' | 'ar'>('en');
+  currentLang$ = this.lang.asObservable();
+
+  setLang(language: 'en' | 'ar') {
+    this.lang.next(language);
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+  }
+
+  getLang() {
+    return this.lang.value;
+  }
+
+}

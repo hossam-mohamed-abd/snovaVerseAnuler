@@ -1,9 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ProcessSectionComponent } from "./components/home/children/process-section/process-section.component";
+import { ProjectsSectionComponent } from "./components/home/children/projects-section/projects-section.component";
+import { IndustriesSectionComponent } from "./components/home/children/industries-section/industries-section.component";
+import { WhyusSectionComponent } from "./components/home/children/whyus-section/whyus-section.component";
+import { ContactUsComponent } from "./components/contact-us/contact-us.component";
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet], 
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

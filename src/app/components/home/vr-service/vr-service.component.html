@@ -1,0 +1,287 @@
+<app-navbar></app-navbar>
+
+<section class="vr-page">
+
+  <!-- HERO -->
+  <div class="vr-hero">
+    <div class="container">
+      <div class="vr-hero-inner">
+
+        <div class="vr-hero-content">
+
+          <div class="vr-eyebrow">
+            <span class="dot"></span>
+            {{ currentLang === 'en'
+            ? 'IMMERSIVE VR SOLUTIONS'
+            : 'حلول الواقع الافتراضي الغامرة' }}
+          </div>
+
+          <h1 class="vr-hero-title">
+            <span class="line-1">
+              {{ currentLang === 'en'
+              ? 'Step Inside'
+              : 'ادخل إلى' }}
+            </span>
+            <span class="line-2">
+              {{ currentLang === 'en'
+              ? 'Your Vision'
+              : 'رؤيتك الرقمية' }}
+            </span>
+          </h1>
+
+          <p class="vr-hero-desc">
+            {{ currentLang === 'en'
+            ? 'We design and develop high-performance virtual reality experiences that transform how organizations
+            train, educate, and engage audiences.'
+            : 'نقوم بتصميم وتطوير تجارب واقع افتراضي عالية الأداء تساعد المؤسسات على تطوير التدريب والتعليم وتعزيز
+            التفاعل.'
+            }}
+          </p>
+
+          <div class="vr-hero-actions">
+            <a routerLink="/home/contact-us" class="btn-primary">
+              {{ currentLang === 'en'
+              ? 'Start Your VR Project'
+              : 'ابدأ مشروع الواقع الافتراضي'
+              }}
+            </a>
+          </div>
+
+        </div>
+
+        <div class="vr-hero-visual">
+          <div class="orb"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FEATURES -->
+  <div class="vr-features">
+    <div class="container">
+
+      <h2 class="section-heading">
+        {{ currentLang === 'en' ? 'Built for ' : 'مصمم لتحقيق ' }}
+        <span class="grad">
+          {{ currentLang === 'en' ? 'Real Impact' : 'أثر حقيقي' }}
+        </span>
+      </h2>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="fc-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>
+            {{ currentLang === 'en' ? 'Educational VR' : 'الواقع الافتراضي التعليمي' }}
+          </h3>
+          <p>
+            {{ currentLang === 'en'
+            ? 'Immersive learning environments that increase retention and engagement.'
+            : 'بيئات تعليمية تفاعلية تزيد من الفهم والاستيعاب وتحفّز التفاعل.'
+            }}
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="fc-icon">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <h3>
+            {{ currentLang === 'en' ? 'Training Simulations' : 'محاكاة التدريب' }}
+          </h3>
+          <p>
+            {{ currentLang === 'en'
+            ? 'Risk-free virtual environments for complex industrial and medical training.'
+            : 'بيئات افتراضية آمنة للتدريب الصناعي والطبي في سيناريوهات معقدة.'
+            }}
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="fc-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>
+            {{ currentLang === 'en' ? 'Virtual Tourism' : 'السياحة الافتراضية' }}
+          </h3>
+          <p>
+            {{ currentLang === 'en'
+            ? 'Transport users to destinations and historical sites beyond physical reach.'
+            : 'نقل المستخدمين إلى وجهات ومعالم تاريخية بتجربة تفاعلية غامرة.'
+            }}
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="fc-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h3>
+            {{ currentLang === 'en' ? 'Enterprise VR' : 'حلول المؤسسات بالواقع الافتراضي' }}
+          </h3>
+          <p>
+            {{ currentLang === 'en'
+            ? 'Virtual showrooms and collaboration spaces for forward-thinking companies.'
+            : 'صالات عرض ومساحات تعاون افتراضية للشركات الطموحة.'
+            }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PROCESS -->
+  <div class="vr-process">
+    <div class="vr-process-bg">
+      <div class="glow glow-process"></div>
+    </div>
+
+    <div class="container">
+
+      <h2 class="section-heading">
+        {{ currentLang === 'en' ? 'From Idea to ' : 'من الفكرة إلى ' }}
+        <span class="grad">
+          {{ currentLang === 'en' ? 'Immersion' : 'التجربة الغامرة' }}
+        </span>
+      </h2>
+
+      <div class="process-track">
+        <div class="process-line"></div>
+
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-dot"></div>
+          <div class="step-content">
+            <h4>{{ currentLang === 'en' ? 'Discovery & Strategy' : 'التحليل والاستراتيجية' }}</h4>
+            <p>
+              {{ currentLang === 'en'
+              ? 'We dive deep into your goals and define the VR experience that creates impact.'
+              : 'نحلل أهدافك بدقة ونحدد التجربة الافتراضية التي تحقق أفضل نتائج.'
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-dot"></div>
+          <div class="step-content">
+            <h4>{{ currentLang === 'en' ? 'Concept & Storyboarding' : 'التصميم والتخطيط' }}</h4>
+            <p>
+              {{ currentLang === 'en'
+              ? 'We design interaction flows and immersive storytelling.'
+              : 'نصمم مسارات التفاعل وسيناريو التجربة الغامرة.'
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-dot"></div>
+          <div class="step-content">
+            <h4>{{ currentLang === 'en' ? 'Development & Integration' : 'التطوير والتنفيذ' }}</h4>
+            <p>
+              {{ currentLang === 'en'
+              ? 'Building optimized VR environments for performance and realism.'
+              : 'بناء بيئات واقع افتراضي محسّنة للأداء والواقعية.'
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-dot"></div>
+          <div class="step-content">
+            <h4>{{ currentLang === 'en' ? 'Testing & Refinement' : 'الاختبار والتحسين' }}</h4>
+            <p>
+              {{ currentLang === 'en'
+              ? 'Ensuring seamless and comfortable immersive experiences.'
+              : 'ضمان تجربة سلسة ومريحة وعالية الجودة.'
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">05</div>
+          <div class="step-dot"></div>
+          <div class="step-content">
+            <h4>{{ currentLang === 'en' ? 'Launch & Support' : 'الإطلاق والدعم المستمر' }}</h4>
+            <p>
+              {{ currentLang === 'en'
+              ? 'Deployment and ongoing support with performance monitoring.'
+              : 'إطلاق المشروع مع متابعة الأداء والدعم المستمر.'
+              }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CTA -->
+  <div class="vr-cta">
+    <div class="cta-bg">
+      <div class="cta-grid"></div>
+      <div class="cta-glow cta-glow-1"></div>
+      <div class="cta-glow cta-glow-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="cta-content">
+
+        <div class="cta-badge">
+          <span class="cta-badge-dot"></span>
+          {{ currentLang === 'en'
+          ? 'Available for New Projects'
+          : 'متاح لمشاريع جديدة'
+          }}
+        </div>
+
+        <h2 class="cta-title">
+          <span class="line-1">
+            {{ currentLang === 'en' ? 'Ready to Build' : 'جاهز لبناء' }}
+          </span>
+          <span class="line-2">
+            {{ currentLang === 'en' ? 'Your VR World?' : 'عالمك الافتراضي؟' }}
+          </span>
+        </h2>
+
+        <p class="cta-desc">
+          {{ currentLang === 'en'
+          ? 'Let’s transform your vision into an immersive digital experience that leaves a lasting impact.'
+          : 'لنحوّل رؤيتك إلى تجربة رقمية غامرة تترك أثراً دائماً.'
+          }}
+        </p>
+
+        <div class="cta-actions">
+          <a routerLink="/home/contact-us" class="cta-btn-primary">
+            {{ currentLang === 'en'
+            ? 'Book a Free Consultation'
+            : 'احجز استشارة مجانية'
+            }}
+          </a>
+
+          <a (click)="goToProjects()" class="cta-btn-outline">
+            {{ currentLang === 'en'
+            ? 'View Our Work →'
+            : 'استعرض أعمالنا →'
+            }}
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>

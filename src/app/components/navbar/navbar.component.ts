@@ -1,0 +1,81 @@
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/language';
+import { RouterLink, Router } from "@angular/router";
+
+@Component({
+  selector: 'app-navbar',
+  standalone: true,
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
+  imports: [RouterLink]
+})
+export class NavbarComponent {
+
+  currentLang: 'en' | 'ar' = 'en';
+  private router = inject(Router);
+
+  constructor(private langService: LanguageService) {
+    this.langService.currentLang$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
+
+  toggleLang() {
+    const newLang = this.currentLang === 'en' ? 'ar' : 'en';
+    this.langService.setLang(newLang);
+  }
+
+  // ✅ دالة موحدة للتعامل مع كل اللينكات في كل الصفحات
+  navigateTo(section: string) {
+    const currentUrl = this.router.url;
+    
+    // 1. لو اللينك هو Contact (دايماً صفحة منفصلة)
+    if (section === 'contact') {
+      this.router.navigate(['/home/contact-us']);
+      return;
+    }
+    
+    // 2. لو احنا دلوقتي في صفحة من صفحات الخدمات
+    if (currentUrl.includes('/home/vr-service') || 
+        currentUrl.includes('/home/AR&AI-service') || 
+        currentUrl.includes('/home/metaverse-service') ||
+        currentUrl.includes('/home/contact-us')) {
+      
+      this.router.navigate(['/home']).then(() => {
+        setTimeout(() => {
+          this.scrollToSection(section);
+        }, 200);
+      });
+      return;
+    }
+    
+    // 3. لو احنا في صفحة Home
+    if (currentUrl.includes('/home') || currentUrl === '/') {
+      this.scrollToSection(section);
+      return;
+    }
+    
+    // 4. لو احنا في أي صفحة تانية
+    this.router.navigate(['/home']).then(() => {
+      setTimeout(() => {
+        this.scrollToSection(section);
+      }, 200);
+    });
+  }
+
+  private scrollToSection(sectionId: string) {
+    setTimeout(() => {
+      const element = document.getElementById(`section-${sectionId}`);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+        
+        // تأثير highlight
+        element.classList.add('section-highlight');
+        setTimeout(() => element.classList.remove('section-highlight'), 2000);
+      }
+    }, 100);
+  }
+}

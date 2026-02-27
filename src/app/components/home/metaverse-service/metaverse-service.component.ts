@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { LanguageService } from '../../../core/language'
+import { NavbarComponent } from "../../navbar/navbar.component";
+import { RouterLink } from "@angular/router";
+@Component({
+  selector: 'app-metaverse-service',
+  imports: [NavbarComponent, RouterLink],
+  templateUrl: './metaverse-service.component.html',
+  styleUrl: './metaverse-service.component.css',
+})
+export class MetaverseServiceComponent {
+  constructor(public langService: LanguageService) { }
+
+  get currentLang() {
+    return this.langService.getLang();
+  }
+}

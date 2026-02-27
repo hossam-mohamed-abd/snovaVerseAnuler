@@ -1,0 +1,146 @@
+<app-navbar></app-navbar>
+
+<section class="meta-page">
+
+  <!-- HERO -->
+  <div class="meta-hero">
+    <div class="container">
+      <div class="meta-hero-inner">
+
+        <div class="meta-hero-content">
+
+          <div class="meta-eyebrow">
+            <span class="dot"></span>
+            {{ currentLang === 'en'
+            ? 'METAVERSE & VIRTUAL SPACES'
+            : 'الميتافيرس والمساحات الافتراضية'
+            }}
+          </div>
+
+          <h1 class="meta-hero-title">
+            <span class="line-1">
+              {{ currentLang === 'en'
+              ? 'Build Your Own'
+              : 'ابنِ عالمك'
+              }}
+            </span>
+            <span class="line-2">
+              {{ currentLang === 'en'
+              ? 'Digital Universe'
+              : 'الرقمي الخاص'
+              }}
+            </span>
+          </h1>
+
+          <p class="meta-hero-desc">
+            {{ currentLang === 'en'
+            ? 'Custom-built digital environments for conferences, exhibitions, museums, and branded immersive
+            experiences.'
+            : 'نصمم عوالم رقمية مخصصة للمؤتمرات والمعارض والمتاحف والتجارب التفاعلية للعلامات التجارية.'
+            }}
+          </p>
+
+          <div class="meta-hero-actions">
+            <a routerLink="/home/contact-us" class="meta-btn-primary">
+              {{ currentLang === 'en'
+              ? 'View Environments'
+              : 'استعرض البيئات الرقمية'
+              }}
+            </a>
+          </div>
+
+        </div>
+
+        <div class="meta-hero-visual">
+          <div class="meta-cube"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FEATURES -->
+  <div class="meta-features">
+    <div class="container">
+
+      <h2 class="section-heading">
+        {{ currentLang === 'en' ? 'Designed for ' : 'مصمم لـ ' }}
+        <span class="grad">
+          {{ currentLang === 'en' ? 'Immersive Experiences' : 'تجارب غامرة' }}
+        </span>
+      </h2>
+
+      <div class="meta-grid row"> <!-- حطيت row هنا -->
+        <div class="col-lg-3 col-md-6 col-12"> <!-- col-12 عشان في الموبايل ياخد عرض كامل -->
+          <div class="meta-card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h3>{{ currentLang === 'en' ? 'Virtual Conferences' : 'مؤتمرات افتراضية' }}</h3>
+            <p>{{ currentLang === 'en' ? 'Fully interactive digital venues for global events and summits.' : 'مساحات
+              رقمية تفاعلية لاستضافة المؤتمرات والفعاليات العالمية.' }}</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="meta-card">
+            <i class="fa-solid fa-store"></i>
+            <h3>{{ currentLang === 'en' ? 'Digital Exhibitions' : 'معارض رقمية' }}</h3>
+            <p>{{ currentLang === 'en' ? '3D exhibition spaces that showcase products and innovations.' : 'مساحات عرض
+              ثلاثية الأبعاد لعرض المنتجات والابتكارات.' }}</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="meta-card">
+            <i class="fa-solid fa-landmark"></i>
+            <h3>{{ currentLang === 'en' ? 'Virtual Museums' : 'متاحف افتراضية' }}</h3>
+            <p>{{ currentLang === 'en' ? 'Immersive storytelling environments for culture and heritage.' : 'بيئات
+              تفاعلية لسرد القصص الثقافية والتراثية.' }}</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="meta-card">
+            <i class="fa-solid fa-cube"></i>
+            <h3>{{ currentLang === 'en' ? 'Branded Spaces' : 'مساحات للعلامات التجارية' }}</h3>
+            <p>{{ currentLang === 'en' ? 'Custom-designed environments reflecting your brand identity.' : 'عوالم رقمية
+              مخصصة تعكس هوية علامتك التجارية.' }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- CTA -->
+  <div class="meta-cta">
+    <div class="container">
+      <div class="meta-cta-box">
+
+        <h2>
+          {{ currentLang === 'en'
+          ? 'Launch Your Metaverse Experience'
+          : 'أطلق تجربتك في الميتافيرس'
+          }}
+        </h2>
+
+        <p>
+          {{ currentLang === 'en'
+          ? 'Let’s build a digital world that represents your vision and connects with your audience.'
+          : 'لننشئ عالماً رقمياً يعكس رؤيتك ويتواصل مع جمهورك.'
+          }}
+        </p>
+
+        <a routerLink="/home/contact-us" class="meta-btn-primary text-center">
+          {{ currentLang === 'en'
+          ? 'Start Now'
+          : 'ابدأ الآن'
+          }}
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+</section>

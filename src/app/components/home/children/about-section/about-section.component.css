@@ -1,0 +1,254 @@
+.about-section {
+    background: linear-gradient(180deg, #0B0F1C 0%, #0E1224 100%);
+    padding: 140px 0;
+    color: #F5F7FA;
+}
+
+/* Title */
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #F5F7FA;
+}
+
+/* Paragraph */
+
+.section-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #9BA3AF;
+    max-width: 520px;
+    margin-bottom: 40px;
+}
+
+/* Stats */
+
+.about-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.stat h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00E5FF;
+    margin-bottom: 5px;
+}
+
+.stat span {
+    font-size: 14px;
+    color: #9BA3AF;
+}
+
+.countries-stat {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip Box */
+
+.countries-tooltip {
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+
+    min-width: 190px;
+
+    background: rgba(15, 20, 35, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 14px;
+
+    padding: 15px 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(123, 63, 228, 0.2);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease;
+    z-index: 100;
+}
+
+/* Arrow */
+
+.countries-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+
+    width: 16px;
+    height: 16px;
+
+    background: rgba(15, 20, 35, 0.75);
+    border-right: 1px solid rgba(0, 229, 255, 0.25);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+}
+
+/* List */
+
+.countries-tooltip ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.countries-tooltip li {
+    font-size: 14px;
+    color: #F5F7FA;
+    padding: 6px 0;
+    transition: 0.3s;
+}
+
+.countries-tooltip li:hover {
+    color: #00E5FF;
+}
+
+/* Hover Effect */
+
+.countries-stat:hover .countries-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* Tags */
+
+.about-tags {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.about-tags span {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(123, 63, 228, 0.15);
+    font-size: 13px;
+    color: #F5F7FA;
+    border: 1px solid rgba(123, 63, 228, 0.3);
+}
+
+/* Image */
+
+
+.about-image-wrapper {
+    max-width: 420px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+        0 20px 60px rgba(0, 229, 255, 0.15),
+        0 0 80px rgba(123, 63, 228, 0.12);
+
+}
+
+.about-image {
+    width: 100%;
+    display: block;
+    transition: transform 0.6s ease;
+    transform: scale(1);
+
+}
+
+/* Hover Effect */
+
+.about-image-wrapper:hover .about-image {
+    transform: scale(1.08);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        padding: 90px 0;
+    }
+
+    .about-stats {
+        gap: 25px;
+    }
+
+    .stat h3 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+}
+
+
+.about-section {
+  position: relative;
+  background: #0B0F1C;
+  overflow: hidden;
+  padding: 140px 0;
+}
+
+.about-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Base Blob Style */
+
+.blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  animation: float 20s infinite ease-in-out alternate;
+}
+
+/* Individual Blobs */
+
+.blob1 {
+  background: #00E5FF;
+  top: -200px;
+  left: -150px;
+}
+
+.blob2 {
+  background: #7B3FE4;
+  bottom: -250px;
+  right: -150px;
+  animation-duration: 25s;
+}
+
+.blob3 {
+  background: #4DA6FF;
+  top: 30%;
+  left: 40%;
+  animation-duration: 30s;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animation */
+
+@keyframes float {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(40px,-30px) scale(1.1); }
+  100% { transform: translate(-30px,40px) scale(1); }
+}

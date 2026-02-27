@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { LanguageService } from '../../../../core/language';
+
+@Component({
+  selector: 'app-about-section',
+  imports: [],
+  templateUrl: './about-section.component.html',
+  styleUrl: './about-section.component.css',
+})
+export class AboutSectionComponent {
+
+  constructor(public langService: LanguageService) { }
+
+  get currentLang() {
+    return this.langService.getLang();
+  }
+}
