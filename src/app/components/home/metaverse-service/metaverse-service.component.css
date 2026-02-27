@@ -10,7 +10,7 @@
   padding: 0 24px;
 }
 
-/* HERO */
+
 .meta-hero {
   padding: 140px 0 120px;
   background:
@@ -52,7 +52,7 @@
   margin-bottom: 40px;
 }
 
-/* Visual */
+
 .meta-cube {
   width: 280px;
   height: 280px;
@@ -65,7 +65,7 @@
   transform: rotate(15deg);
 }
 
-/* FEATURES */
+
 .meta-features {
   padding: 120px 0;
   background: #0B0F1C;
@@ -102,7 +102,7 @@
   opacity: 0.3;
 }
 
-/* Bootstrap Grid تعديل على الـ */
+
 .meta-grid {
   --bs-gutter-x: 24px;
   --bs-gutter-y: 30px;
@@ -116,10 +116,10 @@
   text-align: left;
   transition: all 0.2s ease;
   position: relative;
-  height: 100%; /* عشان الكارد ياخد طول متساوي */
+  height: 100%; 
 }
 
-/* خط جانبي بسيط */
+
 .meta-card::before {
   content: '';
   position: absolute;
@@ -136,7 +136,7 @@
   height: 100%;
 }
 
-/* أيقونات بسيطة */
+
 .meta-card i {
   font-size: 32px;
   margin-bottom: 24px;
@@ -167,7 +167,7 @@
   font-weight: 400;
 }
 
-/* Bootstrap Responsive Classes - استخدام كلاسات Bootstrap */
+
 @media (max-width: 767.98px) {
   .meta-features {
     padding: 80px 0;
@@ -183,7 +183,7 @@
     width: 80px;
   }
   
-  /* Bootstrap بيخلّي كل كارد في صف لوحده */
+  
   .meta-grid [class*="col-"] {
     margin-bottom: 20px;
   }
@@ -198,7 +198,7 @@
   }
   
   .meta-card::before {
-    width: 3px; /* الخط يكون أوضح على الموبايل */
+    width: 3px; 
   }
   
   .meta-card h3 {
@@ -210,7 +210,7 @@
   }
 }
 
-/* للشاشات الصغيرة جداً */
+
 @media (max-width: 575.98px) {
   .meta-card {
     padding: 20px 16px;
@@ -222,7 +222,7 @@
   }
 }
 
-/* CTA */
+
 .meta-cta {
   padding: 120px 0;
   text-align: center;
@@ -230,18 +230,18 @@
 
 .meta-cta-box {
   position: relative;
-  padding: 80px 40px 60px;  /* قللت padding-bottom من 80 لـ 60 */
+  padding: 80px 40px 60px;  
   border-radius: 24px;
   border: 1px solid rgba(108,75,255,0.3);
   overflow: hidden;
-  min-height: 400px;         /* قللت min-height من 500 لـ 400 */
+  min-height: 400px;         
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   isolation: isolate;
 }
-/* الصورة كخلفية منفصلة */
+
 .meta-cta-box::before {
   content: '';
   position: absolute;
@@ -253,7 +253,7 @@
   z-index: -2;
 }
 
-/* طبقة التدرج */
+
 .meta-cta-box::after {
   content: '';
   position: absolute;
@@ -277,8 +277,8 @@
   text-shadow: 0 0 30px rgba(108,75,255,0.5);
   font-weight: 800;
   line-height: 1.2;
-  max-width: 800px;        /* للتحكم في عرض النص */
-  margin-left: auto;       /* للتوسيط */
+  max-width: 800px;        
+  margin-left: auto;       
   margin-right: auto;
 }
 
@@ -289,14 +289,14 @@
   font-size: 18px;
   margin-bottom: 32px;
   text-shadow: 0 2px 15px rgba(0,0,0,0.5);
-  max-width: 600px;        /* أوسع شوية من قبل */
+  max-width: 600px;        
   opacity: 0.95;
   line-height: 1.6;
-  margin-left: auto;       /* توسيط */
+  margin-left: auto;       
   margin-right: auto;
 }
 
-/* الزر الموحد - مرة واحدة فقط */
+
 .meta-btn-primary {
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
@@ -310,7 +310,7 @@
   text-decoration: none;
   display: inline-block;
   width: fit-content;
-  margin-left: auto;       /* توسيط */
+  margin-left: auto;       
   margin-right: auto;
   box-shadow: 0 8px 20px -5px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
@@ -324,7 +324,7 @@
   box-shadow: 0 20px 30px -5px rgba(108,75,255,0.6);
 }
 
-/* Responsive */
+
 @media(max-width:992px){
   .meta-hero-inner{
     grid-template-columns:1fr;
@@ -343,7 +343,7 @@
 
 @media(max-width:768px){
   .meta-cta-box {
-    padding: 60px 24px 40px;  /* ضبطت padding للشاشات الصغيرة */
+    padding: 60px 24px 40px;  
     min-height: 350px;
   }
   
@@ -353,6 +353,6 @@
   
   .meta-cta-box p {
     font-size: 16px;
-    margin-bottom: 24px;      /* قللت المسافة تحت الـ p */
+    margin-bottom: 24px;      
   }
 }

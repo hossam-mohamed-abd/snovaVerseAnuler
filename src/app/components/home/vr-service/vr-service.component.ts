@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LanguageService } from '../../../core/language';
 import { NavbarComponent } from "../../navbar/navbar.component";
-import { RouterLink, Router } from '@angular/router'; // ✅ تأكد من Router هنا
+import { RouterLink, Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-vr-service',
@@ -12,16 +12,16 @@ import { RouterLink, Router } from '@angular/router'; // ✅ تأكد من Route
 export class VrServiceComponent {
   constructor(
     public langService: LanguageService,
-    private router: Router // ✅ تأكد من حقن Router
+    private router: Router 
   ) {}
 
   get currentLang() {
     return this.langService.getLang();
   }
 
-  // ✅ دالة التوجيه
+  
   goToProjects() {
-    console.log('goToProjects clicked'); // للتأكد من أن الدالة بتنفذ
+    console.log('goToProjects clicked'); 
     
     this.router.navigate(['/home']).then(() => {
       setTimeout(() => {

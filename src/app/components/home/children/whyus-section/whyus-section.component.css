@@ -1,4 +1,4 @@
-/* ===== WHY US SECTION ===== */
+
 .whyus-section {
   padding: 100px 0;
   background: linear-gradient(135deg, #0f1325 0%, #1a1f35 100%);
@@ -53,7 +53,7 @@
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* Section Tag */
+
 .section-tag {
   display: inline-block;
   font-size: 12px;
@@ -95,7 +95,7 @@
   border-color: rgba(0, 200, 232, 0.2);
 }
 
-/* Title */
+
 .whyus-title {
   font-size: 42px;
   font-weight: 800;
@@ -134,7 +134,7 @@
   to { width: 100%; }
 }
 
-/* Features List */
+
 .features-list {
   display: flex;
   flex-direction: column;
@@ -217,7 +217,7 @@
   font-style: italic;
 }
 
-/* Visual Side */
+
 .whyus-visual {
   position: relative;
   height: 400px;
@@ -325,7 +325,7 @@
   50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 992px) {
   .whyus-wrapper {
     grid-template-columns: 1fr;
@@ -437,7 +437,7 @@
   .grid-item:nth-child(4):hover { transform: translateY(10px) scale(1.05) rotate(2deg); }
 }
 
-/* RTL Support */
+
 [dir="rtl"] .whyus-content {
   animation: fadeInRight 1s ease;
 }

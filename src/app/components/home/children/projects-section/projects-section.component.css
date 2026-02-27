@@ -1,6 +1,6 @@
-/* ============================= */
-/*        PROJECTS SECTION       */
-/* ============================= */
+
+
+
 
 .projects-section {
   padding: 160px 0;
@@ -32,9 +32,9 @@
 
 
 
-/* ============================= */
-/*        PROJECTS HEADING       */
-/* ============================= */
+
+
+
 
 .projects-heading {
   text-align: center;
@@ -42,7 +42,7 @@
   position: relative;
 }
 
-/* Glow behind title */
+
 .projects-heading::before {
   content: "";
   position: absolute;
@@ -61,7 +61,7 @@
   z-index: 0;
 }
 
-/* Top label */
+
 
 .projects-heading .heading-label {
   display: flex;
@@ -93,7 +93,7 @@
   white-space: nowrap;
 }
 
-/* Main title */
+
 
 .projects-heading .heading-title {
   display: flex;
@@ -127,7 +127,7 @@
   background-clip: text;
 }
 
-/* Subtitle */
+
 
 .projects-heading .heading-subtitle {
   font-size: 15px;
@@ -138,7 +138,7 @@
   position: relative;
   z-index: 1;
 }
-/* Responsive */
+
 
 @media (max-width: 768px) {
 
@@ -159,9 +159,9 @@
     font-size: 15px;
   }
 }
-/* ============================= */
-/*          MAIN PROJECT         */
-/* ============================= */
+
+
+
 
 .project-main {
   position: relative;
@@ -207,9 +207,9 @@
   color: #C6CEDD;
 }
 
-/* ============================= */
-/*           TAG STYLE           */
-/* ============================= */
+
+
+
 
 .project-tag {
   display: inline-block;
@@ -226,9 +226,9 @@
   padding: 5px 12px;
 }
 
-/* ============================= */
-/*         GRID PROJECTS         */
-/* ============================= */
+
+
+
 
 .projects-grid {
   display: grid;
@@ -276,9 +276,9 @@
   margin-top: 8px;
 }
 
-/* ============================= */
-/*          RESPONSIVE           */
-/* ============================= */
+
+
+
 
 @media (max-width: 992px) {
 

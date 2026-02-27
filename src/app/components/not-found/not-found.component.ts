@@ -21,7 +21,7 @@ export class NotFoundComponent implements AfterViewInit, OnDestroy {
   private animFrameId!: number;
   private logo!: THREE.Object3D;
 
-  // Floating particles data
+  
   particles = Array.from({ length: 20 }, () => ({
     style: {
       width:  Math.random() * 4 + 2 + 'px',
@@ -43,7 +43,7 @@ export class NotFoundComponent implements AfterViewInit, OnDestroy {
     const width   = canvas.clientWidth  || 320;
     const height  = canvas.clientHeight || 320;
 
-    /* ---- Renderer ---- */
+    
     this.renderer = new THREE.WebGLRenderer({
       canvas,
       alpha: true,
@@ -52,14 +52,14 @@ export class NotFoundComponent implements AfterViewInit, OnDestroy {
     this.renderer.setSize(width, height);
     this.renderer.setPixelRatio(window.devicePixelRatio);
 
-    /* ---- Scene ---- */
+    
     this.scene = new THREE.Scene();
 
-    /* ---- Camera ---- */
+    
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
     this.camera.position.set(0, 0, 4);
 
-    /* ---- Lights ---- */
+    
     const ambient = new THREE.AmbientLight(0xffffff, 0.6);
     this.scene.add(ambient);
 
@@ -75,19 +75,19 @@ export class NotFoundComponent implements AfterViewInit, OnDestroy {
     rim.position.set(0, 5, -5);
     this.scene.add(rim);
 
-    /* ---- Load GLB ---- */
+    
     const loader = new GLTFLoader();
     loader.load(
-      '/assets/logo3D.glb',           // ← غير المسار لو احتجت
+      '/assets/logo3D.glb',           
       (gltf) => {
         this.logo = gltf.scene;
 
-        // Center the model
+        
         const box = new THREE.Box3().setFromObject(this.logo);
         const center = box.getCenter(new THREE.Vector3());
         this.logo.position.sub(center);
 
-        // Scale to fit
+        
         const size = box.getSize(new THREE.Vector3());
         const maxDim = Math.max(size.x, size.y, size.z);
         this.logo.scale.setScalar(2 / maxDim);
@@ -98,7 +98,7 @@ export class NotFoundComponent implements AfterViewInit, OnDestroy {
       (err) => console.error('GLB load error:', err)
     );
 
-    /* ---- Animate ---- */
+    
     this.animate();
   }
 

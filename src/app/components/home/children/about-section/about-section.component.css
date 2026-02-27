@@ -4,7 +4,7 @@
     color: #F5F7FA;
 }
 
-/* Title */
+
 
 .section-title {
     font-size: 42px;
@@ -13,7 +13,7 @@
     color: #F5F7FA;
 }
 
-/* Paragraph */
+
 
 .section-text {
     font-size: 17px;
@@ -23,7 +23,7 @@
     margin-bottom: 40px;
 }
 
-/* Stats */
+
 
 .about-stats {
     display: flex;
@@ -50,7 +50,7 @@
     cursor: pointer;
 }
 
-/* Tooltip Box */
+
 
 .countries-tooltip {
     position: absolute;
@@ -79,7 +79,7 @@
     z-index: 100;
 }
 
-/* Arrow */
+
 
 .countries-tooltip::after {
     content: "";
@@ -96,7 +96,7 @@
     border-bottom: 1px solid rgba(0, 229, 255, 0.25);
 }
 
-/* List */
+
 
 .countries-tooltip ul {
     list-style: none;
@@ -115,14 +115,14 @@
     color: #00E5FF;
 }
 
-/* Hover Effect */
+
 
 .countries-stat:hover .countries-tooltip {
     opacity: 1;
     transform: translateX(-50%) scale(1);
 }
 
-/* Tags */
+
 
 .about-tags {
     display: flex;
@@ -139,7 +139,7 @@
     border: 1px solid rgba(123, 63, 228, 0.3);
 }
 
-/* Image */
+
 
 
 .about-image-wrapper {
@@ -162,13 +162,13 @@
 
 }
 
-/* Hover Effect */
+
 
 .about-image-wrapper:hover .about-image {
     transform: scale(1.08);
 }
 
-/* Mobile */
+
 
 @media (max-width: 768px) {
 
@@ -205,7 +205,7 @@
   overflow: hidden;
 }
 
-/* Base Blob Style */
+
 
 .blob {
   position: absolute;
@@ -218,7 +218,7 @@
   animation: float 20s infinite ease-in-out alternate;
 }
 
-/* Individual Blobs */
+
 
 .blob1 {
   background: #00E5FF;
@@ -245,7 +245,7 @@
   z-index: 2;
 }
 
-/* Animation */
+
 
 @keyframes float {
   0% { transform: translate(0,0) scale(1); }
