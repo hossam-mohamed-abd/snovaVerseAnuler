@@ -1,17 +1,1 @@
-import { Component } from '@angular/core';
-import { LanguageService } from '../../../../core/language';
-import { RouterLink } from "@angular/router";
-
-@Component({
-  selector: 'app-cta-section',
-  imports: [RouterLink],
-  templateUrl: './cta-section.component.html',
-  styleUrl: './cta-section.component.css',
-})
-export class CtaSectionComponent {
-constructor(public langService: LanguageService) {}
-
-get currentLang() {
-  return this.langService.getLang();
-}
-}
+import { Component } from '@angular/core'; import { LanguageService } from '../../../../core/language'; import { RouterLink } from "@angular/router"; @Component({ selector: 'app-cta-section', imports: [RouterLink], templateUrl: './cta-section.component.html', styleUrl: './cta-section.component.css', }) export class CtaSectionComponent { constructor(public langService: LanguageService) {} get currentLang() { return this.langService.getLang(); } }
