@@ -1,7 +1,4 @@
-/* ============================================
-   404 NOT FOUND — SNOVAVERSE
-   Dark futuristic — GLB logo center stage
-============================================ */
+
 
 :host {
   display: block;
@@ -21,9 +18,9 @@
   gap: 0;
 }
 
-/* ============================= */
-/*         BACKGROUND            */
-/* ============================= */
+
+
+
 
 .nf-bg {
   position: absolute;
@@ -71,7 +68,7 @@
   50%       { transform: translate(30px, -30px); }
 }
 
-/* Scan Line */
+
 .scan-line {
   position: absolute;
   left: 0; right: 0;
@@ -87,7 +84,7 @@
   100% { top: 100%; opacity: 0; }
 }
 
-/* Particles */
+
 .particles { position: absolute; inset: 0; }
 
 .p {
@@ -105,9 +102,9 @@
   100% { transform: translateY(-120px) scale(0.5); opacity: 0; }
 }
 
-/* ============================= */
-/*          3D LOGO              */
-/* ============================= */
+
+
+
 
 .nf-logo-wrapper {
   position: relative;
@@ -142,9 +139,9 @@
   50%       { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
 }
 
-/* ============================= */
-/*          CONTENT              */
-/* ============================= */
+
+
+
 
 .nf-content {
   position: relative;
@@ -156,7 +153,7 @@
   gap: 16px;
 }
 
-/* 404 digits */
+
 .nf-code {
   display: flex;
   align-items: center;
@@ -188,7 +185,7 @@
   50%       { filter: drop-shadow(0 0 20px rgba(123,63,228,0.6)); }
 }
 
-/* Title */
+
 .nf-title {
   font-size: clamp(18px, 2.5vw, 26px); 
   font-weight: 800;
@@ -197,7 +194,7 @@
   margin: 0;
 }
 
-/* Description */
+
 .nf-desc {
   font-size: 14px;
   color: #9BA3AF;
@@ -206,7 +203,7 @@
   margin: 0;
 }
 
-/* Buttons */
+
 .nf-actions {
   display: flex;
   align-items: center;
@@ -286,7 +283,7 @@
 
 .btn-ghost:hover { color: #00E5FF; }
 
-/* Hint */
+
 .nf-hint {
   display: inline-flex;
   align-items: center;
@@ -311,9 +308,9 @@
   50%       { opacity: 0.2; }
 }
 
-/* ============================= */
-/*          RESPONSIVE           */
-/* ============================= */
+
+
+
 
 @media (max-width: 768px) {
   .logo-canvas {

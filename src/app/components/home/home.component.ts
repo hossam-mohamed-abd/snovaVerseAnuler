@@ -24,7 +24,7 @@ export class HomeComponent {
     return this.langService.getLang();
   }
 
-  // ✅ دالة التمرير للمشاريع
+  
   scrollToProjects() {
     const element = document.getElementById('section-projects');
     if (element) {
@@ -33,7 +33,7 @@ export class HomeComponent {
         block: 'start' 
       });
       
-      // تأثير highlight (اختياري)
+      
       element.classList.add('section-highlight');
       setTimeout(() => element.classList.remove('section-highlight'), 2000);
     }

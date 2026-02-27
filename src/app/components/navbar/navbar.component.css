@@ -1,4 +1,4 @@
-/*  GLASS NAVBAR  */
+
 
 .glass-navbar {
   position: fixed;
@@ -19,7 +19,7 @@
   padding: 10px 24px;
 }
 
-/*  BRAND  */
+
 a{
   cursor: pointer;
 }
@@ -34,7 +34,7 @@ a{
   letter-spacing: 0.5px;
 }
 
-/*  LINKS  */
+
 
 .navbar-nav .nav-link {
   color: #A1A8B5;
@@ -62,7 +62,7 @@ a{
   background: linear-gradient(90deg,#00E5FF,#7B3FE4);
 }
 
-/*  ACTIONS  */
+
 
 .lang-switch-badge {
   width: 36px;
@@ -107,7 +107,7 @@ a{
   color: #fff;
 }
 
-/*  TOGGLER  */
+
 
 .custom-toggler {
   border: none;
@@ -121,7 +121,7 @@ a{
   filter: invert(1);
 }
 
-/*  LOGO  */
+
 
 .logo-icon {
   position: relative;
@@ -159,7 +159,7 @@ a{
   opacity: 0.8;
 }
 
-/*  MOBILE  */
+
 
 @media (max-width: 991px) {
 

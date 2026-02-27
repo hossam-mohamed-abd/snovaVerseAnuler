@@ -3,7 +3,7 @@
 <div class="contact-page">
     <div class="contact-container">
 
-        <!-- Left Side - Contact Info -->
+        
         <div class="contact-info">
             <div class="info-header">
                 <span class="info-badge">{{ currentLang === 'en' ? 'CONNECT WITH US' : 'تواصل معنا' }}</span>
@@ -20,13 +20,13 @@
             </div>
 
             <div class="contact-methods">
-                <!-- Phone -->
+                
                 <div class="method-item"  (click)="toggleOption('call')" [class.active]="activeOption === 'call'">
                     <div class="method-icon " >
                         <i class="fa-solid fa-phone" ></i>
                     </div>
 
-                    <!-- حط الـ click هنا على المحتوى فقط -->
+                    
                     <div class="method-content" >
                         <h3>{{ currentLang === 'en' ? 'Call Us' : 'اتصل بنا' }}</h3>
                         <p>{{ currentLang === 'en' ? 'Direct contact with our team' : 'تواصل مباشر مع فريقنا' }}</p>
@@ -57,13 +57,13 @@
                     </div>
                 </div>
 
-                <!-- Email -->
+                
                 <div class="method-item" [class.active]="activeOption === 'email'">
                     <div class="method-icon">
                         <i class="fa-regular fa-envelope"></i>
                     </div>
 
-                    <!-- حط الـ click هنا على المحتوى فقط -->
+                    
                     <div class="method-content" (click)="toggleOption('email')">
                         <h3>{{ currentLang === 'en' ? 'Email Us' : 'راسلنا' }}</h3>
                         <p>{{ currentLang === 'en' ? 'Send us a message anytime' : 'أرسل لنا رسالة في أي وقت' }}</p>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
 
-                <!-- WhatsApp -->
+                
                 <div class="method-item" (click)="openWhatsApp()">
                     <div class="method-icon whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <!-- Calendar -->
+                
                 <div class="method-item" (click)="openCalendar()">
                     <div class="method-icon">
                         <i class="fa-regular fa-calendar"></i>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <!-- Office Info -->
+            
             <div class="office-info">
                 <div class="office-item">
                     <i class="fa-regular fa-building"></i>
@@ -127,14 +127,14 @@
             </div>
         </div>
 
-        <!-- Right Side - Form -->
+        
         <div class="contact-form-wrapper">
             <div class="form-header">
                 <h2>{{ currentLang === 'en' ? 'Send a message' : 'أرسل رسالة' }}</h2>
                 <p>{{ currentLang === 'en' ? 'We\'ll get back to you within 24 hours' : 'سنرد عليك خلال 24 ساعة' }}</p>
             </div>
 
-            <!-- رسالة النجاح -->
+            
             @if (showSuccess) {
             <div class="success-message">
                 <i class="fa-regular fa-circle-check"></i>
@@ -145,10 +145,10 @@
             </div>
             }
 
-            <!-- الفورم المعدل -->
+            
             <form class="contact-form" action="https://formspree.io/f/mzdavrrz" method="POST"
                 (submit)="onFormSubmit($event)">
-                <!-- حقول Formspree المطلوبة -->
+                
                 <input type="hidden" name="_language" [value]="currentLang">
                 <input type="text" name="_gotcha" style="display:none">
 

@@ -63,16 +63,16 @@ export class ContactUsComponent {
       });
       
       if (response.ok) {
-        // نجاح الإرسال
+        
         this.showSuccess = true;
         this.formData = { name: '', email: '', service: '', message: '' };
         
-        // إخفاء رسالة النجاح بعد 5 ثواني
+        
         setTimeout(() => {
           this.showSuccess = false;
         }, 5000);
       } else {
-        // خطأ في الإرسال
+        
         const data = await response.json();
         console.error('Formspree error:', data);
         alert(this.currentLang === 'en' 

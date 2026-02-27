@@ -1,4 +1,4 @@
-/* ===== FOOTER ===== */
+
 .footer {
   background: #05070c;
   position: relative;
@@ -37,7 +37,7 @@
   z-index: 2;
 }
 
-/* Logo Section */
+
 .footer-logo {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@
   max-width: 280px;
 }
 
-/* Social Links */
+
 .footer-social {
   display: flex;
   gap: 12px;
@@ -96,7 +96,7 @@
   box-shadow: 0 10px 20px -5px rgba(0, 200, 160, 0.4);
 }
 
-/* Footer Titles */
+
 .footer-title {
   font-size: 18px;
   font-weight: 700;
@@ -116,7 +116,7 @@
   border-radius: 2px;
 }
 
-/* Footer Links */
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -156,7 +156,7 @@
   left: -15px;
 }
 
-/* Footer CTA Button */
+
 .footer-cta-text {
   color: #8b95a7;
   font-size: 14px;
@@ -200,7 +200,7 @@
   color: #0a0c14;
 }
 
-/* Contact Info */
+
 .footer-contact {
   list-style: none;
   padding: 0;
@@ -236,7 +236,7 @@
   color: #8b95a7;
 }
 
-/* Bottom Footer */
+
 .footer-bottom {
   padding: 25px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -288,7 +288,7 @@
   background: linear-gradient(90deg, transparent, #00c8a0, #00c8e8, transparent);
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
   .footer-main {
     grid-template-columns: repeat(2, 1fr);
@@ -353,7 +353,7 @@
   }
 }
 .footer-links a {
-  cursor: pointer; /* ✅ عشان يبان إنه قابل للنقر */
+  cursor: pointer; 
 }
 
 .footer-links a:hover {

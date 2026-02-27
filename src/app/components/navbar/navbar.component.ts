@@ -25,17 +25,17 @@ export class NavbarComponent {
     this.langService.setLang(newLang);
   }
 
-  // ✅ دالة موحدة للتعامل مع كل اللينكات في كل الصفحات
+  
   navigateTo(section: string) {
     const currentUrl = this.router.url;
     
-    // 1. لو اللينك هو Contact (دايماً صفحة منفصلة)
+    
     if (section === 'contact') {
       this.router.navigate(['/home/contact-us']);
       return;
     }
     
-    // 2. لو احنا دلوقتي في صفحة من صفحات الخدمات
+    
     if (currentUrl.includes('/home/vr-service') || 
         currentUrl.includes('/home/AR&AI-service') || 
         currentUrl.includes('/home/metaverse-service') ||
@@ -49,13 +49,13 @@ export class NavbarComponent {
       return;
     }
     
-    // 3. لو احنا في صفحة Home
+    
     if (currentUrl.includes('/home') || currentUrl === '/') {
       this.scrollToSection(section);
       return;
     }
     
-    // 4. لو احنا في أي صفحة تانية
+    
     this.router.navigate(['/home']).then(() => {
       setTimeout(() => {
         this.scrollToSection(section);
@@ -72,7 +72,7 @@ export class NavbarComponent {
           block: 'start' 
         });
         
-        // تأثير highlight
+        
         element.classList.add('section-highlight');
         setTimeout(() => element.classList.remove('section-highlight'), 2000);
       }
