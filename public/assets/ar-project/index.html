@@ -11,6 +11,22 @@
 </head>
 
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--IMAGETARGETS-->
     <imagetarget id='bear' src='targets/bear.png'></imagetarget>
     <imagetarget id='bfly' src='targets/bfly.png'></imagetarget>
@@ -339,7 +355,16 @@
             <div class="spinner"></div>
         </div>
     </div>
+    <script>
+        window.addEventListener("load", function () {
 
+            // إرسال إشارة أن المشروع جاهز
+            if (window.parent) {
+                window.parent.postMessage("PROJECT_READY", "*");
+            }
+
+        });
+    </script>
 </body>
 
 
