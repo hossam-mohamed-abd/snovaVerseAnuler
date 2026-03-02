@@ -26,9 +26,15 @@
             justify-content: center;
             overflow: hidden;
             padding: 40px 24px;
+
+            opacity: 1;
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        /* ===== Background ===== */
+        .loading-page.fade-out {
+            opacity: 0;
+            transform: scale(1.05);
+        }
 
         .bg {
             position: absolute;
@@ -82,8 +88,6 @@
             }
         }
 
-        /* ===== Logo ===== */
-
         .logo-wrapper {
             position: relative;
             z-index: 2;
@@ -110,8 +114,6 @@
             }
         }
 
-        /* ===== Text ===== */
-
         .loading-text {
             z-index: 2;
             color: #F5F7FA;
@@ -133,8 +135,6 @@
                 opacity: .6;
             }
         }
-
-        /* ===== Progress Bar ===== */
 
         .progress-wrapper {
             width: 260px;
@@ -203,26 +203,43 @@
         </div>
 
     </section>
+
     <script>
         window.addEventListener("load", function () {
 
-            // إنشاء iframe مخفي لتحميل المشروع في الخلفية
+            const MIN_LOADING_TIME = 2000;
+            const startTime = Date.now();
+
+
             const iframe = document.createElement("iframe");
             iframe.src = "index.html";
             iframe.style.display = "none";
             document.body.appendChild(iframe);
 
-            // انتظار رسالة من صفحة المشروع
             window.addEventListener("message", function (event) {
+
                 if (event.data === "PROJECT_READY") {
 
-                    // تحويل المستخدم للمشروع
-                    window.location.href = "index.html";
+                    const elapsed = Date.now() - startTime;
+                    const remainingTime = Math.max(MIN_LOADING_TIME - elapsed, 0);
+
+                    setTimeout(() => {
+
+                        const loader = document.querySelector(".loading-page");
+                        loader.classList.add("fade-out");
+
+                        setTimeout(() => {
+                            window.location.href = "index.html";
+                        }, 800);
+
+                    }, remainingTime);
                 }
+
             });
 
         });
     </script>
+
 </body>
 
 </html>
