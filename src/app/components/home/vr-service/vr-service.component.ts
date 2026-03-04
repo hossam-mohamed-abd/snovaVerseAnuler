@@ -1,1 +1,50 @@
-import { Component } from '@angular/core'; import { LanguageService } from '../../../core/language'; import { NavbarComponent } from "../../navbar/navbar.component"; import { RouterLink, Router } from '@angular/router'; @Component({ selector: 'app-vr-service', imports: [NavbarComponent, RouterLink], templateUrl: './vr-service.component.html', styleUrl: './vr-service.component.css', }) export class VrServiceComponent { constructor( public langService: LanguageService, private router: Router ) {} get currentLang() { return this.langService.getLang(); } goToProjects() { console.log('goToProjects clicked'); this.router.navigate(['/home']).then(() => { setTimeout(() => { const element = document.getElementById('section-projects'); if (element) { element.scrollIntoView({ behavior: 'smooth' }); } else { console.log('Element section-projects not found'); } }, 300); }); } }
+import { Component, ChangeDetectorRef } from '@angular/core';
+import { LanguageService } from '../../../core/language';
+import { NavbarComponent } from '../../navbar/navbar.component';
+import { RouterLink, Router } from '@angular/router';
+import { PageLoader } from '../../../core/page-loader';
+import { LandingPageComponent } from '../../landing-page/landing-page.component';
+
+@Component({
+  selector: 'app-vr-service',
+  imports: [NavbarComponent, RouterLink,LandingPageComponent],
+  templateUrl: './vr-service.component.html',
+  styleUrl: './vr-service.component.css',
+})
+export class VrServiceComponent extends PageLoader {
+
+  constructor(
+    public langService: LanguageService,
+    private router: Router,
+    cdr: ChangeDetectorRef
+  ) {
+    super(cdr);
+  }
+
+  get currentLang() {
+    return this.langService.getLang();
+  }
+
+  goToProjects() {
+
+    console.log('goToProjects clicked');
+
+    this.router.navigate(['/home']).then(() => {
+
+      setTimeout(() => {
+
+        const element = document.getElementById('section-projects');
+
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.log('Element section-projects not found');
+        }
+
+      }, 300);
+
+    });
+
+  }
+
+}
