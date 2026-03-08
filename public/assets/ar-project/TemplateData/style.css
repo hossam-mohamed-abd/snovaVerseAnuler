@@ -36,9 +36,9 @@ body {
 }
 
 #unity-logo {
-  width: 300px;              /* عدل حسب لوجوك */
-  height: 150px;             /* عدل حسب النسبة */
-  margin: 0 auto;            /* توسيط أفقي */
+  width: 300px;              
+  height: 150px;             
+  margin: 0 auto;           
   background: url('webgl-logo.png') no-repeat center center;
   background-size: contain;
 }
@@ -46,7 +46,7 @@ body {
 #unity-progress-bar-empty {
   width: 141px;
   height: 18px;
-  margin: 10px auto 0 auto;   /* توسيط */
+  margin: 10px auto 0 auto;  
   background: url('progress-bar-empty-light.png') no-repeat center;
 }
 

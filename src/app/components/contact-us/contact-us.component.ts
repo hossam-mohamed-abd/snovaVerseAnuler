@@ -42,7 +42,7 @@ export class ContactUsComponent extends PageLoader {
   }
 
   openWhatsApp() {
-    const phone = '201063950383';
+    const phone = '201507495163';
 
     const message =
       this.currentLang === 'en'
