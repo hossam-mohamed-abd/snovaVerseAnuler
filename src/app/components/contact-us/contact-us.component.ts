@@ -53,7 +53,7 @@ export class ContactUsComponent extends PageLoader {
   }
 
   openCalendar() {
-    window.open('https://calendly.com/hossam545mohamed/30min', '_blank');
+    window.open('https://calendly.com/snovaverse/30min', '_blank');
   }
 
   async onFormSubmit(event: Event) {
@@ -67,7 +67,7 @@ export class ContactUsComponent extends PageLoader {
 
     try {
 
-      const response = await fetch('https://formspree.io/f/mzdavrrz', {
+      const response = await fetch('https://formspree.io/f/xnjgngzk', {
         method: 'POST',
         body: formData,
         headers: { Accept: 'application/json' },

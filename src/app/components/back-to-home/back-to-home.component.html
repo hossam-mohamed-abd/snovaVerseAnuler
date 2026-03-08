@@ -1,0 +1,6 @@
+@if (loading) {
+<app-landing-page></app-landing-page>
+}
+<div [hidden]="loading">
+    <a routerLink="/home" class="home-btn"><i class="fa-solid fa-house"></i></a>
+</div>
