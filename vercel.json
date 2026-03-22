@@ -1,27 +1,10 @@
 {
-  "version": 2,
-  "builds": [
+  "buildCommand": "ng build --configuration production",
+  "outputDirectory": "dist/snovaVerseAnuler/browser",
+  "rewrites": [
     {
-      "src": "dist/snovaVerseAnuler/server/server.mjs",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/snovaVerseAnuler/browser/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/dist/snovaVerseAnuler/browser/assets/$1"
-    },
-    {
-      "src": "/(.*\\.(js|css|ico|png|jpg|svg|woff|woff2|ttf|eot))",
-      "dest": "/dist/snovaVerseAnuler/browser/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/snovaVerseAnuler/server/server.mjs"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
